@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="CopyOver">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Machines">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Machine" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="WinSCPVariables">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="IP"/>
+                                                    <xs:element name="Username"/>
+                                                    <xs:element name="Password"/>
+                                                    <xs:element name="SSHKey"/>
+                                                </xs:sequence>
+                                                <xs:attribute name="Path" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="Local"/>
+                                        <xs:element name="Remote"/>
+                                        <xs:element name="Item"/>
+                                        <xs:element name="LogPath"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="ComputerName"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

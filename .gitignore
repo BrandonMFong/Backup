@@ -1,0 +1,11 @@
+# The notes
+BOOKS/*
+
+# The config file
+bin/CopyOver.xml
+
+# Time file
+bin/Time
+
+# visual code workspace file
+VC-Notebook.code-workspace
