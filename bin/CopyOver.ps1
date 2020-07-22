@@ -12,8 +12,8 @@ New-Item $MachineXml.LogPath -Force | Out-Null;
 
 switch($Method)
 {
-  "Push"{[String]$Command = "put -neweronly $($MachineXml.Item)";}
-  "Pull"{[String]$Command = "get -neweronly $($MachineXml.Item)";}
+  "Push"{[String]$Command = "put -neweronly $($MachineXml.Item) -nopreservetime";}
+  "Pull"{[String]$Command = "get -neweronly $($MachineXml.Item) -nopreservetime";}
 }
 
 & "$($MachineXml.WinSCPVariables.Path)" `
@@ -22,7 +22,7 @@ switch($Method)
     "open sftp://$($MachineXml.WinSCPVariables.Username):$($MachineXml.WinSCPVariables.Password)@$($MachineXml.WinSCPVariables.IP)/ -hostkey=`"`"$($MachineXml.WinSCPVariables.SSHKey)`"`" -rawsettings Cipher=`"`"aes,chacha20,3des,WARN,des,blowfish,arcfour`"`"" `
     "lcd $($MachineXml.Local)" `
     "cd $($MachineXml.Remote)" `
-    "$($Command) -nopreservetime" `
+    "$($Command)" `
     "exit"
 
 [int16]$winscpResult = $LastExitCode;
