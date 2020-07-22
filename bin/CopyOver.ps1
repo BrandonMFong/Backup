@@ -25,14 +25,14 @@ switch($Method)
     "$($Command) -nopreservetime" `
     "exit"
 
-$winscpResult = $LastExitCode
+[int16]$winscpResult = $LastExitCode;
 if ($winscpResult -eq 0)
 {
-  Write-Host "Success"
+  Write-Host "Success";
 }
 else
 {
-  Write-Host "Error"
+  Write-Host "Error";
 }
 
 exit $winscpResult
