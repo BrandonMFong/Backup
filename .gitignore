@@ -1,8 +1,11 @@
 # The notes
 BOOKS/*
 
+# Logs
+LOGS/*
+
 # The config file
-bin/CopyOver.xml
+bin/Notebook.xml
 
 # Time file
 bin/Time
