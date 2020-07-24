@@ -11,13 +11,11 @@ if(!$Found){throw "Error in config";}
 New-Item $MachineXml.LogPath -Force | Out-Null; # Clearing log file
 
 # how to set it so that if delete on remote, it will delete locally
+# Sync command
 switch($Method)
 {
   "Push"{[String]$Command = "put -neweronly $($MachineXml.Item) -nopreservetime";}
   "Pull"{[String]$Command = "get -neweronly $($MachineXml.Item) -nopreservetime";}
-  # "Push"{[String]$Command = "synchronize remote -mirror $($MachineXml.Item) -nopreservetime";}
-  # "Pull"{[String]$Command = "synchronize local -mirror $($MachineXml.Item) -nopreservetime";}
-  # "Sync"{[String]$Command = "synchronize both -nopreservetime";}
 }
 # [String]$Command = "synchronize both -nopreservetime";
 
