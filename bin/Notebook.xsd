@@ -25,7 +25,7 @@
                                         <xs:element name="Item"/>
                                         <xs:element name="LogPath"/>
                                     </xs:sequence>
-                                    <xs:attribute name="ComputerName"/>
+                                    <xs:attribute name="ComputerName" use="required"/>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
