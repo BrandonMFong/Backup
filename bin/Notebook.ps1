@@ -1,3 +1,8 @@
+<#
+.Synopsis
+  A way to keep my notes in sync
+#>
+
 Param([ValidateSet('Push','Pull','Delete')][String]$Method,[String]$FilePath,[Switch]$DeleteLocally)
 
 [System.Xml.XmlDocument]$CopyConfig = Get-Content $PSScriptRoot\Notebook.xml;
@@ -17,6 +22,7 @@ switch($Method)
 {
   "Push"{[String]$Command = "put -neweronly $($MachineXml.Item) -nopreservetime";}
   "Pull"{[String]$Command = "get -neweronly $($MachineXml.Item) -nopreservetime";}
+  # You have to provide the file path from root of this repo
   "Delete"
   {
     if([string]::IsNullOrEmpty($FilePath)){throw "Please provide remote file path"}
