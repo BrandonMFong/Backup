@@ -11,4 +11,4 @@ bin/Backup.xml
 bin/Time
 
 # visual code workspace file
-VC-Notebook.code-workspace
+*.code-workspace
