@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<App xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation=".\Backup.xsd">
+    <Machines>
+        <Machine ComputerName="KAMANTA">
+            <WinSCPVariables Path="C:\Program Files (x86)\WinSCP\WinSCP.com">
+                <IP></IP>
+                <Username></Username>
+                <Password></Password>
+                <SSHKey></SSHKey>
+            </WinSCPVariables>
+            <Local>B:\NOTEBOOK</Local>
+            <Remote>/home/brandonmfong/shares/one/NOTEBOOK/test</Remote>
+            <Item>BOOKS</Item>
+            <LogPath>B:\NOTEBOOK\LOGS\Notebook.log</LogPath>
+        </Machine>
+    </Machines>
+</App>

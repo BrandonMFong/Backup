@@ -5,7 +5,7 @@ BOOKS/*
 LOGS/*
 
 # The config file
-bin/Notebook.xml
+bin/Backup.xml
 
 # Time file
 bin/Time
